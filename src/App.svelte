@@ -1,17 +1,13 @@
 <script>
   import Counter from './lib/Counter.svelte'
+  import Scene from './lib/Scene.svelte'
 </script>
 
 <main>
   <h1>Überschrift</h1>
 
-  <div class="card">
-    <Counter />
-  </div>
 
-  <p>
-    Nur etwas Text
-  </p>
+  <Scene />
 </main>
 
 <style>
