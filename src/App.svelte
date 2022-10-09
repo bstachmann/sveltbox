@@ -1,32 +1,22 @@
 <script>
-import Berg from './lib/Berg.svelte'
-import Huette from './lib/Huette.svelte'
+import { currentScene }  from './lib/state';
+import Huette from './lib/Huette.svelte';
 
-let scenes = [ Berg, Huette ];
-let currentScene = Huette;
+let displayScene;
+currentScene.subscribe(value => {
+  displayScene = value;
+});
 
-function setScene(s) {
-  return () => {
-    console.log("MOIN", s);
-    currentScene = s;
-  }
-}
+currentScene.set(Huette);
 
 </script>
 
 <main>
   <h1>Ein Adventure</h1>
 
-  {#each scenes as scene }
-    <button on:click={setScene(scene)}>{scene.name}</button>
-  {/each}
-
   <div class="scene" style="">
-    <svelte:component this={currentScene} />
+    <svelte:component this={displayScene} />
   </div>
-
-
-
 
 </main>
 
