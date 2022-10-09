@@ -1,9 +1,10 @@
 
 <script>
+    let r = Math.random()
 </script>
   
   
-<h1>Berg</h1>
+<h1>Berg {r}</h1>
 
   
   
