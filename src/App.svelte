@@ -2,11 +2,8 @@
 import { currentScene }  from './lib/state';
 import Huette from './lib/Huette.svelte';
 
-let displayScene;
-currentScene.subscribe(value => {
-  displayScene = value;
-});
-
+let sceneToDisplay;
+currentScene.subscribe(value => { sceneToDisplay = value; });
 currentScene.set(Huette);
 
 </script>
@@ -15,7 +12,7 @@ currentScene.set(Huette);
   <h1>Ein Adventure</h1>
 
   <div class="scene" style="">
-    <svelte:component this={displayScene} />
+    <svelte:component this={sceneToDisplay} />
   </div>
 
 </main>

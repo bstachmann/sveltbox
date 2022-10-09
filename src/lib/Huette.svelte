@@ -4,7 +4,6 @@ import Berg from './Berg.svelte';
 import { currentScene } from './state';
 
 function toBerg() {
-  alert("zu Berge!");
   currentScene.set(Berg);
 }
 </script>
