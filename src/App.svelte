@@ -7,22 +7,14 @@ let sceneToDisplay;
 currentScene.subscribe(value => { sceneToDisplay = value; });
 currentScene.set(Huette);
 
-function aufnBerg() {
-  alert("Und hoch")
-  currentScene.set(Berg);
-}
-
 </script>
 
 <main>
   <h1>Ein Adventure</h1>
 
-  <button on:click={aufnBerg}>Berch</button>
-
   <div class="scene" style="">
     <svelte:component this={sceneToDisplay} />
   </div>
-
 </main>
 
 <style>
