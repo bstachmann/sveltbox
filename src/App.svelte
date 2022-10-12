@@ -1,7 +1,8 @@
 <script >
-import { currentScene }  from './lib/state';
+import { currentScene, inventory }  from './lib/state';
 
-import Huette from './lib/Huette.svelte';
+import Huette from './lib/scenes/Huette.svelte';
+    import { each } from 'svelte/internal';
 
 currentScene.set(Huette);
 
@@ -9,6 +10,13 @@ currentScene.set(Huette);
 
 <main>
   <h1>Ein Adventure</h1>
+
+  <p>
+    inventory: 
+    {#each $inventory as item}
+    {item}, 
+    {/each}
+  </p>
 
   <div class="scene" style="">
     <svelte:component this={$currentScene} />
