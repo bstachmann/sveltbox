@@ -1,5 +1,5 @@
 
-<script>
+<script context="module">
 import Berg from './Berg.svelte';
 import { currentScene } from './state';
 
