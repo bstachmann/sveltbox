@@ -1,18 +1,17 @@
 
 <script context="module">
 import { inventory } from '../state';
+import { get } from 'svelte/store';
 
-function take() {
-    inventory.set(["edelw"])
+function action() {
+    inventory.set({...get(inventory), "edelweiss": "Moin Edelweiß!"});
 }
 </script>
 
-<h2>WE</h2>
+<h2>Das Edelweiß</h2>
 
-<!--  -->
-{#if $inventory.includes("edelw") }
+{#if $inventory["edelweiss"] }
 <p>Not Edelweiß</p>
 {:else}
-<p>Edelweiß</p>
-<button on:click={take}>Take</button>
+<button on:click={action}>Ein Edelweiß</button>
 {/if}
