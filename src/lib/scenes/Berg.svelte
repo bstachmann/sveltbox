@@ -1,12 +1,10 @@
 
 <script context="module">
-    import Huette, {name} from './Huette.svelte';
     import Edelweiss from '../items/Edelweiss.svelte';
-    import { currentScene } from '../state';
-    // import Huette from './Huette.svelte';
+    import { scene } from '../state';
 
     function toHuette() {
-         currentScene.set(Huette);
+         scene.set("Huette");
     }
 </script>
   
@@ -14,7 +12,7 @@
 
 <Edelweiss showInLocation={"Berg"}/>
 
-<button on:click={toHuette}>Zurück zur tollen {name}!</button>
+<button on:click={toHuette}>Zurück zur tollen Hütte!</button>
 
   
   

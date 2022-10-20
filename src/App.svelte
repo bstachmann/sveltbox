@@ -1,9 +1,17 @@
 <script >
-import { currentScene }  from './lib/state';
+import { scene }  from './lib/state';
 import Inventory from './lib/Inventory.svelte';
-import Huette from './lib/scenes/Huette.svelte';
+	
+let sceneComponent;
 
-currentScene.set(Huette);
+scene.set("Huette");
+
+scene.subscribe(newSceneName => {
+  (async () => {
+      const toImport = './lib/scenes/'+newSceneName+'.svelte';
+	  	sceneComponent = (await import(toImport)).default;
+	})();	
+});
 
 </script>
 
@@ -15,7 +23,7 @@ currentScene.set(Huette);
   <h2>Scene</h2>
 
   <div class="scene" style="">
-    <svelte:component this={$currentScene} />
+    <svelte:component this={sceneComponent} />
   </div>
 </main>
 

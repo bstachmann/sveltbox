@@ -1,14 +1,11 @@
 
 <script context="module">
-import Berg from './Berg.svelte';
-import { currentScene } from '../state';
-
+import { scene } from '../state';
 export const name="Hütte";
 
 function toBerg() {
-  currentScene.set(Berg);
+  scene.set("Berg");
 }
-
 </script>
   
 

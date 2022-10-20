@@ -4,7 +4,6 @@
 </script>
 <script>
     export let showInLocation;
-
     function action() {  
         itemLocation.set($itemLocation === "Inventory" ? "Berg" : "Inventory" );
     };
