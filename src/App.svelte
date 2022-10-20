@@ -1,5 +1,5 @@
 <script >
-import { currentScene, inventory }  from './lib/state';
+import { currentScene }  from './lib/state';
 import Inventory from './lib/Inventory.svelte';
 import Huette from './lib/scenes/Huette.svelte';
 
@@ -25,7 +25,7 @@ currentScene.set(Huette);
   background-color: bisque;
   position:relative; 
   width:640px; 
-  height:480px; 
+  height:320px; 
   overflow:hidden;
 }
 </style>

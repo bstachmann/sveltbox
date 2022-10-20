@@ -1,18 +1,20 @@
-<script >
-import { inventory }  from './state';
+<script context="module">
+import Edelweiss  from './items/Edelweiss.svelte';
+
+let allHoldableItems = [ 
+  Edelweiss,
+];
+
 </script>
 
-<main>
-  <h2>Inventorium</h2>
+<h2>Inventory</h2>
 
-  <p>
-    inventory: 
-    {#each Object.entries($inventory) as [k,v]}
-    KEY {k} VALUE {v} <br/> 
-    {/each}
-  </p>
+<ul>
+  {#each allHoldableItems as item}
+    <li><svelte:component this={item} showInLocation="Inventory"/></li>
+  {/each}
+</ul>
 
-</main>
 
 <style>
 </style>

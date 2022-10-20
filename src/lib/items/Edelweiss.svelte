@@ -1,17 +1,17 @@
-
 <script context="module">
-import { inventory } from '../state';
-import { get } from 'svelte/store';
+    import { writable } from 'svelte/store';
+    let itemLocation = writable("Berg");
+</script>
+<script>
+    export let showInLocation;
 
-function action() {
-    inventory.set({...get(inventory), "edelweiss": "Moin Edelweiß!"});
-}
+    function action() {  
+        itemLocation.set($itemLocation === "Inventory" ? "Berg" : "Inventory" );
+    };
 </script>
 
-<h2>Das Edelweiß</h2>
+{#if showInLocation === $itemLocation }
+    <button on:click={action}>ein Edelweiss</button>    
+{/if} 
 
-{#if $inventory["edelweiss"] }
-<p>Not Edelweiß</p>
-{:else}
-<button on:click={action}>Ein Edelweiß</button>
-{/if}
+

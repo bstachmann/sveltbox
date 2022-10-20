@@ -1,22 +1,20 @@
 
 <script context="module">
-    import Huette from './Huette.svelte';
+    import Huette, {name} from './Huette.svelte';
     import Edelweiss from '../items/Edelweiss.svelte';
     import { currentScene } from '../state';
-
-    export let r = Math.random()
+    // import Huette from './Huette.svelte';
 
     function toHuette() {
          currentScene.set(Huette);
     }
 </script>
   
-  
-<h1>Berg {r}</h1>
+<h1>Berg</h1>
 
-<Edelweiss/>
+<Edelweiss showInLocation={"Berg"}/>
 
-<button on:click={toHuette}>Zurück zur Hütte!</button>
+<button on:click={toHuette}>Zurück zur tollen {name}!</button>
 
   
   
