@@ -10,7 +10,7 @@
   
 <h1>Berg</h1>
 
-<Edelweiss showInLocation={"Berg"}/>
+<Edelweiss/>
 
 <button on:click={toHuette}>Zurück zur tollen Hütte!</button>
 
