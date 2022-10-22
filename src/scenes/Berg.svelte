@@ -1,7 +1,7 @@
 
 <script context="module">
     import Edelweiss from '../items/Edelweiss.svelte';
-    import { scene } from '../state';
+    import { scene } from '../lib/state';
 
     function toHuette() {
          scene.set("Huette");

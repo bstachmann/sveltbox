@@ -1,6 +1,6 @@
 
 <script context="module">
-import { scene } from '../state';
+import { scene } from '../lib/state';
 export const name="Hütte";
 
 function toBerg() {

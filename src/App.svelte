@@ -8,7 +8,7 @@ scene.set("Huette");
 
 scene.subscribe(newSceneName => {
   (async () => {
-      const toImport = './lib/scenes/'+newSceneName+'.svelte';
+      const toImport = './scenes/'+newSceneName+'.svelte';
 	  	sceneComponent = (await import(toImport)).default;
 	})();	
 });

@@ -1,5 +1,5 @@
 <script context="module">
-import Edelweiss  from './items/Edelweiss.svelte';
+import Edelweiss  from '../items/Edelweiss.svelte';
 
 let allHoldableItems = [ 
   Edelweiss,
