@@ -1,5 +1,5 @@
 
-<script context="module">
+<script context="module" lang="ts">
     import Edelweiss from '../items/Edelweiss.svelte';
     import { scene } from '../lib/state';
 

@@ -1,5 +1,5 @@
 
-<script context="module">
+<script context="module" lang="ts">
 import { scene } from '../lib/state';
 export const name="Hütte";
 

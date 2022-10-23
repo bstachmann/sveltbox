@@ -1,7 +1,8 @@
-<script context="module">
+<script context="module" lang="ts">
+import type { SvelteComponentDev } from 'svelte/internal';
 import Edelweiss  from '../items/Edelweiss.svelte';
 
-let allHoldableItems = [ 
+let allHoldableItems: Array<any> = [ 
   Edelweiss,
 ];
 

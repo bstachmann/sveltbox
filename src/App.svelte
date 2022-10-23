@@ -1,10 +1,8 @@
-<script>
+<script lang="ts">
   import { scene }  from './lib/state';
   import Inventory from './lib/Inventory.svelte';
     
-  let sceneComponent;
-  
-  scene.set("Huette");
+  let sceneComponent: any;
   
   scene.subscribe(newSceneName => {
     (async () => {

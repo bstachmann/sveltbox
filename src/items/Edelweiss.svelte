@@ -1,6 +1,6 @@
-<script context="module">
+<script context="module" lang="ts">
     import { writable, get } from 'svelte/store';
-    import { scene } from '../lib/state.js'
+    import { scene } from '../lib/state'
 
     let itemLocation = writable("Berg");
 </script>
