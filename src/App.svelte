@@ -1,18 +1,18 @@
-<script >
-import { scene }  from './lib/state';
-import Inventory from './lib/Inventory.svelte';
-	
-let sceneComponent;
-
-scene.set("Huette");
-
-scene.subscribe(newSceneName => {
-  (async () => {
-      const toImport = './scenes/'+newSceneName+'.svelte';
-	  	sceneComponent = (await import(toImport)).default;
-	})();	
-});
-
+<script>
+  import { scene }  from './lib/state';
+  import Inventory from './lib/Inventory.svelte';
+    
+  let sceneComponent;
+  
+  scene.set("Huette");
+  
+  scene.subscribe(newSceneName => {
+    (async () => {
+        const toImport = './scenes/'+newSceneName+'.svelte';
+        sceneComponent = (await import(toImport)).default;
+    })();	
+  });
+  
 </script>
 
 <main>
@@ -37,3 +37,4 @@ scene.subscribe(newSceneName => {
   overflow:hidden;
 }
 </style>
+  
