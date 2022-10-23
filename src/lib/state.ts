@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const scene = writable<string>("Berg");
+export const scene = writable<string>("Huette");
