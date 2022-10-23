@@ -1,3 +1,4 @@
+
 tasks:
   - init: npm install
     command: npm run dev
@@ -7,3 +8,7 @@ ports:
     onOpen: open-preview
   - port: 35729
     onOpen: ignore
+vscode:
+  extensions:
+    - svelte.svelte-vscode
+    - eamodio.gitlens
